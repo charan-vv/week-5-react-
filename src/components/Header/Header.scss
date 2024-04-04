@@ -1,12 +1,19 @@
-@mixin header($textcolor: rgb(20, 190, 247),$hcolor:rgb(6, 104, 136))
-{
-    .header{
-        p{
-            color:$textcolor;
+@mixin header($textcolor: rgb(20, 190, 247), $hcolor: rgb(6, 104, 136)) {
+    .header {
+        list-style-type: none;
+        cursor: pointer;
+        
+        p {
+            color: $textcolor;
         }
-        h4{
-            color:$hcolor
+        
+        h4 {
+            color: $hcolor;
         }
+    }
+    .NavList{
+        list-style-type: none;
+        gap: 20px;
     }
 }
 

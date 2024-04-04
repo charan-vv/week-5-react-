@@ -1,27 +1,38 @@
-import React from 'react'
+import React from 'react';
 import "./Header.scss";
-import Button from '../Button/Button';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HomePage from '../HomeContent/homeContent';
+import AboutPage from '../AboutContent/aboutContent';
+import ContactPage from "../ContactContent/contactContent";
+import LoginPage from '../LoginPage/LoginPage';
 
-function Header(){
-    return(
-        <>
-        <div className="container header">
-            <div className="row">
-                <div className="col-3 d-flex justify-content-between">
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Contact</p>
-                </div>
-                <div className="col-5">
-                    <h4>LANDING</h4>
-                </div>
-                <div className="col-4">
-                <Button text="Buy Now" backgroundColor="blue" color="white"border="none" />
+function Header() {
+    return (
+        <Router>
+            <div className="header">
+                <nav>
+                    <ul className='NavList d-flex'>
+                        <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/login">Login</Link></li>
+                    </ul>  
+                </nav>
+                <div>
+                    <Routes>
+                        <Route path='/home' element={<HomePage />} />
+                        <Route path='/about' element={<AboutPage />} />
+                        <Route path='/contact' element={<ContactPage />} />
+                        <Route path='/login' element={<LoginPage />} />
+                    </Routes>
                 </div>
             </div>
-        </div>
-        </>
-    )
+        </Router>
+    );
 }
 
 export default Header;
+
+                    
+                    
+                    
