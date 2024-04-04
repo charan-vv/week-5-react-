@@ -1,0 +1,18 @@
+@mixin primary($bg-color: rgb(180, 229, 247),$text-color: rgb(219, 10, 10))
+{
+   .Primary{
+        color:$text-color;
+        background-color:$bg-color ;
+        border: none;
+   }
+}
+@mixin secondary($bg-color: rgb(211, 239, 161),$text-color: rgb(57, 12, 204)){
+
+    .Secondary{
+        color:$text-color;
+        background-color:$bg-color ;
+        border: none;
+   }
+}
+@include primary();
+@include secondary();

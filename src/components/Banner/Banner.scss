@@ -1,0 +1,8 @@
+
+@mixin banner($text-color: black, $bg-color: rgb(15, 15, 125), $btn-color: white)
+ {
+    p {
+      color: $text-color;
+    }
+  }
+  @include banner();
